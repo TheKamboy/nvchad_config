@@ -6,6 +6,7 @@ local M = {}
 
 M.ui = {
 	theme = "gruvbox",
+  --transparency = true,
 
   -- syntax styling
 	hl_override = {

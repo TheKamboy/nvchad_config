@@ -15,9 +15,10 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- typescript
-lspconfig.tsserver.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
+-- conform
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
