@@ -38,8 +38,6 @@ vim.schedule(function()
   require "mappings"
 end)
 
-require "configs.lspconfig"
-
 -- setup noice.nvim
 require("noice").setup {
   lsp = {
