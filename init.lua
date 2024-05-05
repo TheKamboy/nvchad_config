@@ -38,6 +38,8 @@ vim.schedule(function()
   require "mappings"
 end)
 
+require "configs.lspconfig"
+
 -- setup noice.nvim
 require("noice").setup {
   lsp = {
@@ -57,3 +59,6 @@ require("noice").setup {
     lsp_doc_border = true, -- add a border to hover docs and signature help
   },
 }
+
+-- setup mini animate
+require("mini.animate").setup()

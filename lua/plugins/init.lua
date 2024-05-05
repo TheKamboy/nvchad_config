@@ -40,4 +40,5 @@ return {
       { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
     },
   },
+  { "echasnovski/mini.nvim", version = "*" },
 }
