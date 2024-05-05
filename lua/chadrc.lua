@@ -7,11 +7,13 @@ local M = {}
 M.ui = {
 	theme = "gruvbox",
 
+  -- syntax styling
 	hl_override = {
 		Comment = { italic = true },
 		["@comment"] = { italic = true },
 	},
 
+  -- dashboard
   nvdash = {
     load_on_startup = true,
 
@@ -35,6 +37,12 @@ M.ui = {
       { "  Themes", "Spc t h", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
     },
+  },
+
+  -- term
+    term = {
+    hl = "Normal:term,WinSeparator:WinSeparator",
+    sizes = { sp = 0.3, vsp = 0.5 },
   },
 }
 
