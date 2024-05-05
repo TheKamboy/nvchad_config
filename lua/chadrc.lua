@@ -1,18 +1,18 @@
--- This file  needs to have same structure as nvconfig.lua 
+-- This file needs to have same structure as nvconfig.lua
 -- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
 local M = {}
 
 M.ui = {
-	theme = "gruvbox",
+  theme = "gruvbox",
   --transparency = true,
 
   -- syntax styling
-	hl_override = {
-		Comment = { italic = true },
-		["@comment"] = { italic = true },
-	},
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
 
   -- dashboard
   nvdash = {
@@ -41,10 +41,13 @@ M.ui = {
   },
 
   -- term
-    term = {
+  term = {
     hl = "Normal:term,WinSeparator:WinSeparator",
     sizes = { sp = 0.3, vsp = 0.5 },
   },
 }
+
+-- fix noice.nvim errors
+M.ui.lsp = { signature = false }
 
 return M

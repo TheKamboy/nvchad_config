@@ -16,6 +16,4 @@ map("n", "<leader>v", function()
   require("nvchad.term").new { pos = "vsp" }
 end, { desc = "terminal new vertical window" })
 
-map("n", "<leader>gg", ":LazyGit<CR>", { desc="lazygit" })
-
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
