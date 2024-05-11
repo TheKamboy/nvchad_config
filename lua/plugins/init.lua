@@ -62,4 +62,10 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "RishabhRD/nvim-lsputils",
+    dependencies = {
+      "RishabhRD/popfix",
+    },
+  },
 }
