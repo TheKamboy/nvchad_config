@@ -1,6 +1,9 @@
 vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
 vim.g.mapleader = " "
 
+-- fix notify wining pt 1
+vim.opt.termguicolors = true
+
 -- bootstrap lazy and all plugins
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 
@@ -56,6 +59,11 @@ require("noice").setup {
     inc_rename = false, -- enables an input dialog for inc-rename.nvim
     lsp_doc_border = true, -- add a border to hover docs and signature help
   },
+}
+
+-- fix notify wining pt 2
+require("notify").setup {
+  background_colour = "#000000",
 }
 
 -- setup mini animate
