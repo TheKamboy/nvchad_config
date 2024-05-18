@@ -17,3 +17,5 @@ map("n", "<leader>v", function()
 end, { desc = "terminal new vertical window" })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+map("n", "q:", ":", { desc = "got rid of command history" }) -- its a common mistake for me and its annoying
