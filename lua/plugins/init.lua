@@ -85,31 +85,33 @@ return {
     version = "*", -- Pin Neorg to the latest stable release
     config = function()
       require("neorg").setup {
-        ["core.defaults"] = {}, -- Loads default behaviour
-        ["core.concealer"] = {}, -- Adds pretty icons to your documents
-        ["core.integrations.treesitter"] = {},
-        ["core.autocommands"] = {},
-        ["core.dirman"] = { -- Manages Neorg workspaces
-          config = {
-            workspaces = {
-              notes = "~/notes",
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.integrations.treesitter"] = {},
+          ["core.autocommands"] = {},
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                notes = "~/notes",
+              },
+              default_workspace = "notes",
             },
-            default_workspace = "notes",
           },
-        },
-        ["core.keybinds"] = {
-          config = {
-            default_keybinds = true,
+          ["core.keybinds"] = {
+            config = {
+              default_keybinds = true,
+            },
           },
-        },
-        ["core.completion"] = {
-          config = {
-            engine = "nvim-cmp",
+          ["core.completion"] = {
+            config = {
+              engine = "nvim-cmp",
+            },
           },
+          ["core.integrations.nvim-cmp"] = {},
+          ["core.export"] = {},
+          ["core.export.markdown"] = {},
         },
-        ["core.integrations.nvim-cmp"] = {},
-        ["core.export"] = {},
-        ["core.export.markdown"] = {},
       }
     end,
   },
