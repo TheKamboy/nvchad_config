@@ -45,6 +45,7 @@ return {
   --- Lsp
   {
     "williamboman/mason.nvim",
+    version = false,
     opts = {
       ensure_installed = {
         "lua-language-server",
@@ -57,6 +58,7 @@ return {
   },
   {
     "neovim/nvim-lspconfig",
+    version = false,
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
@@ -64,6 +66,7 @@ return {
   },
   {
     "RishabhRD/nvim-lsputils",
+    version = false,
     dependencies = {
       "RishabhRD/popfix",
     },
@@ -111,6 +114,12 @@ return {
           ["core.integrations.nvim-cmp"] = {},
           ["core.export"] = {},
           ["core.export.markdown"] = {},
+          ["core.ui"] = {},
+          ["core.ui.calendar"] = {},
+          -- ["core.presenter"] = {
+          --   zen_mode = "zen-mode",
+          -- },
+          ["core.tempus"] = {},
         },
       }
     end,
@@ -119,5 +128,14 @@ return {
     "nvim-neorg/tree-sitter-norg",
     lazy = false,
     version = "*",
+  },
+  -- Lua
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
   },
 }
