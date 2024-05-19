@@ -16,6 +16,8 @@ map("n", "<leader>v", function()
   require("nvchad.term").new { pos = "vsp" }
 end, { desc = "terminal new vertical window" })
 
+vim.keymap.del("n", "<leader>n")
+
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 map("n", "q:", ":", { desc = "got rid of command history" }) -- its a common mistake for me and its annoying

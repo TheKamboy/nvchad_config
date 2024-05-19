@@ -109,7 +109,6 @@ return {
         },
         ["core.integrations.nvim-cmp"] = {},
         ["core.export"] = {},
-        ["core.export.markdown"] = {},
       }
     end,
   },
