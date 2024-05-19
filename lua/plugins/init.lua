@@ -120,5 +120,4 @@ return {
     lazy = false,
     version = "*",
   },
-  { "AstroNvim/astrotheme" },
 }
