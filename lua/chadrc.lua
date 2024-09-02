@@ -5,7 +5,7 @@
 local M = {}
 
 M.ui = {
-  theme = "catppuccin",
+  theme = "chadwal",
   transparency = true,
 
   -- syntax styling
