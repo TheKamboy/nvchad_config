@@ -27,3 +27,12 @@ map("n", "<A-Down>", "<cmd>m .+1<CR>==") -- move line up(n)
 map("n", "<A-Up>", "<cmd>m .-2<CR>==") -- move line down(n)
 map("v", "<A-Down>", "<cmd>m '>+1<CR>gv=gv") -- move line up(v)
 map("v", "<A-Up>", "<cmd>m '<-2<CR>gv=gv") -- move line down(v)
+
+-- move lines (neorg)
+vim.keymap.set("n", "<C-Up>", "<Plug>(neorg.text-objects.item-up)", {})
+vim.keymap.set("n", "<C-Down>", "<Plug>(neorg.text-objects.item-down)", {})
+vim.keymap.set({ "o", "x" }, "iH", "<Plug>(neorg.text-objects.textobject.heading.inner)", {})
+vim.keymap.set({ "o", "x" }, "aH", "<Plug>(neorg.text-objects.textobject.heading.outer)", {})
+
+-- neorg file search
+vim.keymap.set("n", "<leader>fn", "<Plug>(neorg.telescope.find_norg_files)", { desc = "telescope find neorg files" })

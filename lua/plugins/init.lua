@@ -81,13 +81,13 @@ return {
   },
   {
     "nvim-neorg/neorg",
-    dependencies = { "luarocks.nvim", "nvim-lua/plenary.nvim" },
-    lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+    dependencies = { "luarocks.nvim", "nvim-lua/plenary.nvim", { "nvim-neorg/neorg-telescope" } },
+    lazy = false,  -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
     version = "*", -- Pin Neorg to the latest stable release
     config = function()
       require("neorg").setup {
         load = {
-          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.defaults"] = {},  -- Loads default behaviour
           ["core.concealer"] = {}, -- Adds pretty icons to your documents
           ["core.integrations.treesitter"] = {},
           ["core.autocommands"] = {},
@@ -126,6 +126,11 @@ return {
           ["core.esupports.indent"] = {},
           ["core.promo"] = {},
           ["core.itero"] = {},
+          ["core.esupports.metagen"] = {},
+          ["core.esupports.hop"] = {},
+          ["core.dirman.utils"] = {},
+          ["core.text-objects"] = {},
+          ["core.integrations.telescope"] = {},
         },
       }
     end,
