@@ -4,7 +4,7 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "rust_analyzer", "gopls" }
+local servers = { "html", "cssls", "rust_analyzer", "gopls", "marksman", "bashls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -22,3 +22,13 @@ end
 --   on_init = nvlsp.on_init,
 --   capabilities = nvlsp.capabilities,
 -- }
+
+-- better code action (fzf)
+local autocmd = vim.api.nvim_create_autocmd
+autocmd("LspAttach", {
+  callback = function(args)
+    vim.schedule(function()
+      vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>lua require('fzf-lua').lsp_code_actions()<cr>", {buffer = args.buf, desc="LSP Code action"})
+    end)
+  end,
+})
